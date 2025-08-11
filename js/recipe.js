@@ -1,7 +1,7 @@
 const servingSlider = document.getElementById('servings');
 const servingCount = document.getElementById('serving-count');
 const displayServings = document.getElementById('display-servings');
-const baseServings = 6; // Original recipe serves 6 people
+const baseServings = 8; // Original recipe serves 8 people
 
 function updateServings() {
     const newServings = parseInt(servingSlider.value);
