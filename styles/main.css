@@ -98,18 +98,54 @@ body {
 }
 
 .ingredients-list li {
-    margin-bottom: 8px;
-    padding-left: 20px;
+    margin-bottom: 12px; /* Increased margin */
+    padding-left: 35px; /* Adjusted padding for checkbox */
     position: relative;
     color: #5d4e37;
-    line-height: 1.4;
+    line-height: 1.5; /* Adjusted line height */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    cursor: pointer; /* Add cursor pointer */
 }
 
-.ingredients-list li::before {
-    content: '';
+.ingredients-list li input[type="checkbox"] {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px; /* Custom size */
+    height: 20px; /* Custom size */
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fdfaf6;
+    border: 2px solid #e8ddc7;
+    border-radius: 4px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.ingredients-list li input[type="checkbox"]:checked {
+    background-color: #d2691e;
+    border-color: #8b4513;
+}
+
+.ingredients-list li input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    line-height: 18px;
+}
+
+.ingredients-list li label {
+    flex-grow: 1; /* Allow label to take remaining space */
+    transition: color 0.3s;
+}
+
+.ingredients-list li input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #a0522d; /* Softer color when checked */
 }
 
 .instructions-list {
@@ -202,6 +238,10 @@ body {
     font-weight: 600;
     font-size: 1.1em;
     min-width: 80px;
+}
+
+.ingredient-amount, .instruction-amount {
+    white-space: nowrap;
 }
 
 .timing-info {
@@ -327,19 +367,35 @@ body {
 .recipe-list {
     list-style: none;
     padding: 0;
+    width: 100%; /* Ensure the list takes full width */
+    max-width: 600px; /* Control the max width of the list */
+}
+
+.recipe-list li {
+    margin-bottom: 25px; /* Added more space between items */
 }
 
 .recipe-list li a {
-    font-family: 'Reenie Beanie', cursive; /* Changed font */
-    font-size: 2.6em; /* Changed font size */
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.8em; /* Slightly increased font size */
     color: #d2691e;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     line-height: 1.5;
+    display: inline-block; /* To allow transforms */
+}
+
+.recipe-list li:nth-child(odd) {
+    text-align: left;
+}
+
+.recipe-list li:nth-child(even) {
+    text-align: right;
 }
 
 .recipe-list li a:hover {
     color: #8b4513;
+    transform: scale(1.05); /* Add a subtle hover effect */
 }
 
 /* Back button for recipe page */
