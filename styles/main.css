@@ -302,7 +302,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Changed from center */
+    padding-top: 10vh; /* Added padding */
     min-height: 100vh;
     text-align: center;
     padding: 40px;
@@ -313,7 +314,14 @@ body {
     font-size: 6em;
     color: #5d4e37;
     text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.recipe-list-prompt {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.5em;
+    color: #a0522d;
+    margin-bottom: 20px;
 }
 
 .recipe-list {
@@ -322,15 +330,37 @@ body {
 }
 
 .recipe-list li a {
-    font-family: 'Crimson Text', serif;
-    font-size: 2em;
+    font-family: 'Reenie Beanie', cursive; /* Changed font */
+    font-size: 3em; /* Changed font size */
     color: #d2691e;
     text-decoration: none;
     transition: color 0.3s ease;
-    border-bottom: 2px solid transparent;
+    line-height: 1.5;
 }
 
 .recipe-list li a:hover {
     color: #8b4513;
-    border-bottom: 2px solid #8b4513;
+}
+
+/* Back button for recipe page */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2em;
+    color: #8b4513;
+    text-decoration: none;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    background: white;
+    color: #d2691e;
+    transform: translateX(-2px);
 }
