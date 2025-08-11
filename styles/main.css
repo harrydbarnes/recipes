@@ -367,19 +367,35 @@ body {
 .recipe-list {
     list-style: none;
     padding: 0;
+    width: 100%; /* Ensure the list takes full width */
+    max-width: 600px; /* Control the max width of the list */
+}
+
+.recipe-list li {
+    margin-bottom: 25px; /* Added more space between items */
 }
 
 .recipe-list li a {
-    font-family: 'Reenie Beanie', cursive; /* Changed font */
-    font-size: 2.6em; /* Changed font size */
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.8em; /* Slightly increased font size */
     color: #d2691e;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
     line-height: 1.5;
+    display: inline-block; /* To allow transforms */
+}
+
+.recipe-list li:nth-child(odd) {
+    text-align: left;
+}
+
+.recipe-list li:nth-child(even) {
+    text-align: right;
 }
 
 .recipe-list li a:hover {
     color: #8b4513;
+    transform: scale(1.05); /* Add a subtle hover effect */
 }
 
 /* Back button for recipe page */
