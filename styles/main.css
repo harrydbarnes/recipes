@@ -383,12 +383,18 @@ body {
     display: inline-block; /* To allow transforms */
 }
 
-.recipe-list li:nth-child(odd) {
+.recipe-list li:nth-child(4n+1) {
     text-align: left;
 }
 
-.recipe-list li:nth-child(even) {
+.recipe-list li:nth-child(4n+3) {
     text-align: right;
+}
+
+.recipe-list .separator {
+    font-size: 2.5em;
+    text-align: center;
+    color: #a0522d;
 }
 
 .recipe-list li a:hover {
