@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     padding: 20px;
     animation: fadeIn 1s ease-in-out;
+    padding-bottom: 80px; /* For bottom nav bar */
 }
 
 @keyframes fadeIn {
@@ -430,4 +431,38 @@ hr {
     background: white;
     color: #d2691e;
     transform: translateX(-2px);
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fefcf8;
+    box-shadow: 0 -5px 15px rgba(139, 69, 19, 0.15);
+    border-top: 1px solid #e8ddc7;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8b4513;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #d2691e;
+}
+
+.nav-link .icon {
+    font-size: 1.8em;
+    margin-bottom: 4px;
 }

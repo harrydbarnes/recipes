@@ -10,13 +10,33 @@
 <body>
     <div class="landing-page">
         <h1 class="landing-title">Cook a Feast</h1>
-        <p class="recipe-list-prompt">Click below to load:</p>
+        <div class="search-container">
+            <form action="search-results.html" method="GET">
+                <input type="search" name="query" placeholder="Search for recipes, ingredients, or tags...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <p class="recipe-list-prompt">Or click below to load:</p>
         <hr>
         <ul class="recipe-list">
-            <li><a href="recipes/tonys-secret-vegan-curry.html">Tony's Original Secret Vegan Curry Recipe</a></li>
+            <li><a href="recipes/template.html?id=1">Tony's Original Secret Vegan Curry Recipe</a></li>
             <li class="separator">~</li>
-            <li><a href="recipes/harrys-broccoli-tagliatelle.html">Harry's Broccoli Tagliatelle</a></li>
+            <li><a href="recipes/template.html?id=2">Harry's Broccoli Tagliatelle</a></li>
         </ul>
     </div>
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+        </a>
+        <a href="fridge-raider.html" class="nav-link">
+            <span class="icon">🍳</span>
+            <span class="text">Fridge Raider</span>
+        </a>
+        <a href="pantry.html" class="nav-link">
+            <span class="icon">🥫</span>
+            <span class="text">The Pantry</span>
+        </a>
+    </nav>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe</title> <!-- Title will be set dynamically -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <a href="../index.html" class="back-button">&larr; Home</a>
+    <div class="cookbook-page">
+        <div class="page-content">
+            <h1 class="recipe-title"></h1> <!-- Dynamic content -->
+            <p class="recipe-subtitle"></p> <!-- Dynamic content -->
+
+            <div class="serving-slider">
+                <div class="slider-container">
+                    <label for="servings" class="slider-label">👥 Adjust Servings:</label>
+                    <div class="slider-wrapper">
+                        <input type="range" id="servings" min="1" max="16" value="8" class="slider"> <!-- Max and value will be set dynamically -->
+                        <div class="slider-value">
+                            <span id="serving-count">8</span> people <!-- Value will be set dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timing-info">
+                <div class="time-section">
+                    <span class="time-label">Prep Time:</span>
+                    <span id="prep-time"></span> <!-- Dynamic content -->
+                </div>
+                <div class="time-section">
+                    <span class="time-label">Cooking Time:</span>
+                    <span id="cook-time"></span> <!-- Dynamic content -->
+                </div>
+                <div class="time-section">
+                    <span class="time-label">Serves:</span>
+                    <span id="display-servings"></span> <!-- Dynamic content -->
+                </div>
+            </div>
+
+            <div class="decorative-element">❦ ❦ ❦</div>
+
+            <div class="recipe-content">
+                <div class="ingredients-section">
+                    <h2 class="section-title">Ingredients</h2>
+                    <ul class="ingredients-list">
+                        <!-- Ingredients will be populated dynamically -->
+                    </ul>
+                </div>
+
+                <div class="instructions-section">
+                    <h2 class="section-title">Instructions</h2>
+                    <ol class="instructions-list">
+                        <!-- Instructions will be populated dynamically -->
+                    </ol>
+                </div>
+            </div>
+
+            <div class="decorative-element">❦</div>
+
+            <br>
+
+            <div class="chef-note">
+                <!-- Chef's note can be added dynamically if it exists in the data -->
+            </div>
+
+            <div class="decorative-element">❦</div>
+
+        </div>
+    </div>
+
+    <script src="../js/recipes.js"></script>
+    <script src="../js/view-recipe.js"></script>
+    <script src="../js/recipe.js"></script>
+    <script src="../js/ingredients.js"></script>
+    <nav class="bottom-nav">
+        <a href="../index.html" class="nav-link">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+        </a>
+        <a href="../fridge-raider.html" class="nav-link">
+            <span class="icon">🍳</span>
+            <span class="text">Fridge Raider</span>
+        </a>
+        <a href="../pantry.html" class="nav-link">
+            <span class="icon">🥫</span>
+            <span class="text">The Pantry</span>
+        </a>
+    </nav>
+</body>
+</html>

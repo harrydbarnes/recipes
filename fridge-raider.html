@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge Raider - Find Recipes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">&larr; Home</a>
+    <div class="cookbook-page">
+        <div class="page-content">
+            <h1 class="recipe-title">Fridge Raider</h1>
+            <p class="recipe-subtitle">Enter the ingredients you have, separated by commas, and we'll find recipes you can make!</p>
+
+            <div class="fridge-radar-form">
+                <textarea id="ingredients-input" placeholder="e.g., chicken, rice, tomatoes..."></textarea>
+                <button id="find-recipes-btn">Find Recipes</button>
+            </div>
+
+            <div class="results-section">
+                <h2 class="section-title">Matching Recipes</h2>
+                <ul id="results-list">
+                    <!-- Matching recipes will be displayed here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/recipes.js"></script>
+    <script src="js/fridge-raider.js"></script>
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+        </a>
+        <a href="fridge-radar.html" class="nav-link">
+            <span class="icon">🔍</span>
+            <span class="text">Fridge Radar</span>
+        </a>
+        <a href="pantry.html" class="nav-link">
+            <span class="icon">🥫</span>
+            <span class="text">The Pantry</span>
+        </a>
+    </nav>
+</body>
+</html>

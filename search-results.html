@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">&larr; Home</a>
+    <div class="cookbook-page">
+        <div class="page-content">
+            <h1 class="recipe-title">Search Results</h1>
+            <p class="recipe-subtitle">Showing results for: "<span id="search-query"></span>"</p>
+
+            <div class="results-section">
+                <ul id="results-list" class="recipe-list">
+                    <!-- Matching recipes will be displayed here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/recipes.js"></script>
+    <script src="js/search.js"></script>
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+        </a>
+        <a href="fridge-raider.html" class="nav-link">
+            <span class="icon">🍳</span>
+            <span class="text">Fridge Raider</span>
+        </a>
+        <a href="pantry.html" class="nav-link">
+            <span class="icon">🥫</span>
+            <span class="text">The Pantry</span>
+        </a>
+    </nav>
+</body>
+</html>

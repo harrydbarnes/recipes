@@ -1,79 +1,53 @@
-const servingSlider = document.getElementById('servings');
-const servingCount = document.getElementById('serving-count');
-const displayServings = document.getElementById('display-servings');
-const baseServings = 8; // Original recipe serves 8 people
+document.addEventListener('DOMContentLoaded', () => {
+    const servingSlider = document.getElementById('servings');
+    if (!servingSlider) return; // Do nothing if there's no slider on the page
 
-function updateServings() {
-    const newServings = parseInt(servingSlider.value);
-    const multiplier = newServings / baseServings;
+    const servingCount = document.getElementById('serving-count');
+    const displayServings = document.getElementById('display-servings');
+    let baseServings = parseInt(servingSlider.value, 10);
 
-    // Update serving display
-    servingCount.textContent = newServings;
-    displayServings.textContent = newServings;
+    // If view-recipe.js has set a global baseServings, use that.
+    if (window.baseServings) {
+        baseServings = window.baseServings;
+    }
 
-    // Update ingredient amounts
-    document.querySelectorAll('.ingredient-amount').forEach(element => {
-        const baseAmount = parseFloat(element.dataset.base);
-        const newAmount = baseAmount * multiplier;
-
-        // Format the amount nicely
-        let formattedAmount;
-        if (newAmount < 1 && newAmount > 0) {
-            // For fractions less than 1
-            formattedAmount = (Math.round(newAmount * 8) / 8).toString();
-            if (formattedAmount === '0.125') formattedAmount = '1/8';
-            else if (formattedAmount === '0.25') formattedAmount = '1/4';
-            else if (formattedAmount === '0.375') formattedAmount = '3/8';
-            else if (formattedAmount === '0.5') formattedAmount = '1/2';
-            else if (formattedAmount === '0.625') formattedAmount = '5/8';
-            else if (formattedAmount === '0.75') formattedAmount = '3/4';
-            else if (formattedAmount === '0.875') formattedAmount = '7/8';
-        } else if (newAmount >= 1 && newAmount < 10) {
-            // For amounts 1-10, show one decimal if needed
-            formattedAmount = (Math.round(newAmount * 10) / 10).toString();
-            if (formattedAmount.endsWith('.0')) formattedAmount = Math.round(newAmount).toString();
-        } else {
-            // For larger amounts, round to whole numbers
-            formattedAmount = Math.round(newAmount).toString();
+    function formatAmount(amount) {
+        if (amount < 1 && amount > 0) {
+            const eighths = Math.round(amount * 8);
+            if (eighths === 0) return '0';
+            if (eighths === 8) return '1';
+            // Simple fraction representation
+            if (eighths % 2 === 0) return `${eighths/2}/4`;
+            if (eighths % 4 === 0) return `${eighths/4}/2`;
+            return `${eighths}/8`;
         }
-
-        // Get the emoji and unit from original text
-        const originalText = element.innerHTML;
-        const emoji = originalText.match(/^[^a-zA-Z0-9\s]+/)[0];
-        const unit = originalText.replace(/^[^a-zA-Z0-9\s]+\s*[\d\/\.]+\s*/, '').trim();
-
-        element.innerHTML = `${emoji} ${formattedAmount}${unit ? ' ' + unit : ''}`;
-    });
-
-    // Update instruction amounts
-    document.querySelectorAll('.instruction-amount').forEach(element => {
-        const baseAmount = parseFloat(element.dataset.base);
-        const unit = element.dataset.unit || '';
-        const newAmount = baseAmount * multiplier;
-
-        let formattedAmount;
-        if (newAmount < 1 && newAmount > 0) {
-            formattedAmount = (Math.round(newAmount * 8) / 8).toString();
-            if (formattedAmount === '0.125') formattedAmount = '1/8';
-            else if (formattedAmount === '0.25') formattedAmount = '1/4';
-            else if (formattedAmount === '0.375') formattedAmount = '3/8';
-            else if (formattedAmount === '0.5') formattedAmount = '1/2';
-            else if (formattedAmount === '0.625') formattedAmount = '5/8';
-            else if (formattedAmount === '0.75') formattedAmount = '3/4';
-            else if (formattedAmount === '0.875') formattedAmount = '7/8';
-        } else if (newAmount >= 1 && newAmount < 10) {
-            formattedAmount = (Math.round(newAmount * 10) / 10).toString();
-            if (formattedAmount.endsWith('.0')) formattedAmount = Math.round(newAmount).toString();
-        } else {
-            formattedAmount = Math.round(newAmount).toString();
+        if (amount >= 1 && amount < 10) {
+            const rounded = Math.round(amount * 10) / 10;
+            return rounded.toString();
         }
+        return Math.round(amount).toString();
+    }
 
-        // Get the text before the amount from original
-        const originalText = element.textContent;
-        const prefix = originalText.split(/[\d\/\.]+/)[0];
+    function updateServings() {
+        const newServings = parseInt(servingSlider.value);
+        const multiplier = newServings / baseServings;
 
-        element.textContent = `${prefix}${formattedAmount}${unit}`;
-    });
-}
+        // Update serving display
+        servingCount.textContent = newServings;
+        displayServings.textContent = newServings;
 
-servingSlider.addEventListener('input', updateServings);
+        // Update ingredient and instruction amounts
+        document.querySelectorAll('.ingredient-amount, .instruction-amount').forEach(element => {
+            const baseAmount = parseFloat(element.dataset.base);
+            const unit = element.dataset.unit || '';
+            const newAmount = baseAmount * multiplier;
+
+            element.textContent = `${formatAmount(newAmount)}${unit}`;
+        });
+    }
+
+    servingSlider.addEventListener('input', updateServings);
+
+    // Initial call to set amounts correctly if slider value is not the base.
+    // updateServings();
+});

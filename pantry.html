@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pantry - Essential Ingredients</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .pantry-section {
+            margin-bottom: 40px;
+        }
+        .pantry-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .pantry-list li {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px dotted #e8ddc7;
+        }
+        .pantry-item-name {
+            font-weight: bold;
+            color: #8b4513;
+        }
+        .pantry-item-desc {
+            margin-top: 5px;
+            color: #5d4e37;
+        }
+        .pantry-item-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #d2691e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .pantry-item-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">&larr; Home</a>
+    <div class="cookbook-page">
+        <div class="page-content">
+            <h1 class="recipe-title">The Pantry</h1>
+            <p class="recipe-subtitle">A collection of essential ingredients for various cuisines. Click on an item to find recipes that use it!</p>
+
+            <div class="pantry-section">
+                <h2 class="section-title">Italian Essentials</h2>
+                <ul class="pantry-list">
+                    <li>
+                        <div class="pantry-item-name">Olive Oil</div>
+                        <p class="pantry-item-desc">The foundation of Italian cooking, used for frying, dressing, and finishing dishes.</p>
+                        <a href="search-results.html?query=olive oil" class="pantry-item-link">Find recipes with Olive Oil &rarr;</a>
+                    </li>
+                    <li>
+                        <div class="pantry-item-name">Garlic</div>
+                        <p class="pantry-item-desc">Adds a pungent, aromatic flavor to countless sauces, sautés, and roasts.</p>
+                        <a href="search-results.html?query=garlic" class="pantry-item-link">Find recipes with Garlic &rarr;</a>
+                    </li>
+                    <li>
+                        <div class="pantry-item-name">Canned Tomatoes</div>
+                        <p class="pantry-item-desc">A versatile base for pasta sauces, soups, and braises.</p>
+                        <a href="search-results.html?query=chopped tomatoes" class="pantry-item-link">Find recipes with Canned Tomatoes &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pantry-section">
+                <h2 class="section-title">Mexican Must-Haves</h2>
+                <ul class="pantry-list">
+                    <li>
+                        <div class="pantry-item-name">Cumin</div>
+                        <p class="pantry-item-desc">Provides a warm, earthy flavor essential for chili, tacos, and spice rubs.</p>
+                        <a href="search-results.html?query=cumin" class="pantry-item-link">Find recipes with Cumin &rarr;</a>
+                    </li>
+                    <li>
+                        <div class="pantry-item-name">Black Beans</div>
+                        <p class="pantry-item-desc">A great source of protein, used in burritos, salads, and side dishes.</p>
+                        <a href="search-results.html?query=black beans" class="pantry-item-link">Find recipes with Black Beans &rarr;</a>
+                    </li>
+                    <li>
+                        <div class="pantry-item-name">Tortillas</div>
+                        <p class="pantry-item-desc">The vessel for tacos, burritos, quesadillas, and enchiladas.</p>
+                        <a href="search-results.html?query=tortillas" class="pantry-item-link">Find recipes with Tortillas &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pantry-section">
+                <h2 class="section-title">Asian Staples</h2>
+                <ul class="pantry-list">
+                    <li>
+                        <div class="pantry-item-name">Soy Sauce</div>
+                        <p class="pantry-item-desc">Adds a salty and umami flavor to marinades, stir-fries, and dipping sauces.</p>
+                        <a href="search-results.html?query=soy sauce" class="pantry-item-link">Find recipes with Soy Sauce &rarr;</a>
+                    </li>
+                    <li>
+                        <div class="pantry-item-name">Sesame Oil</div>
+                        <p class="pantry-item-desc">A finishing oil with a distinct, nutty aroma and flavor.</p>
+                        <a href="search-results.html?query=sesame oil" class="pantry-item-link">Find recipes with Sesame Oil &rarr;</a>
+                    </li>
+                    <li>
+                        <div class="pantry-item-name">Rice Noodles</div>
+                        <p class="pantry-item-desc">A gluten-free noodle used in dishes like Pad Thai and pho.</p>
+                        <a href="search-results.html?query=rice noodles" class="pantry-item-link">Find recipes with Rice Noodles &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+        </a>
+        <a href="fridge-raider.html" class="nav-link">
+            <span class="icon">🍳</span>
+            <span class="text">Fridge Raider</span>
+        </a>
+        <a href="pantry.html" class="nav-link">
+            <span class="icon">🥫</span>
+            <span class="text">The Pantry</span>
+        </a>
+    </nav>
+</body>
+</html>
