@@ -11,10 +11,13 @@
     <a href="index.html" class="back-button">&larr; Home</a>
     <div class="cookbook-page">
         <div class="page-content">
-            <h1 class="recipe-title">Search Results</h1>
-            <p class="recipe-subtitle">Showing results for: "<span id="search-query"></span>"</p>
+            <h1 class="recipe-title">Search</h1>
+            <div class="search-container">
+                <input type="search" id="search-input" placeholder="Start typing to search...">
+            </div>
 
             <div class="results-section">
+                <p class="recipe-subtitle">Showing results for: "<span id="search-query"></span>"</p>
                 <ul id="results-list" class="recipe-list">
                     <!-- Matching recipes will be displayed here -->
                 </ul>
@@ -22,8 +25,8 @@
         </div>
     </div>
 
-    <script src="js/recipes.js"></script>
-    <script src="js/search.js"></script>
+    <script src="js/recipes.js" defer></script>
+    <script src="js/search.js" defer></script>
     <nav class="bottom-nav">
         <a href="index.html" class="nav-link">
             <span class="icon">🏠</span>
@@ -36,6 +39,10 @@
         <a href="pantry.html" class="nav-link">
             <span class="icon">🥫</span>
             <span class="text">The Pantry</span>
+        </a>
+        <a href="search-results.html" class="nav-link">
+            <span class="icon">🔎</span>
+            <span class="text">Search</span>
         </a>
     </nav>
 </body>

@@ -1,34 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('query');
+    const initialQuery = urlParams.get('query') || '';
+
+    const searchInput = document.getElementById('search-input');
     const searchQuerySpan = document.getElementById('search-query');
     const resultsList = document.getElementById('results-list');
 
-    if (query) {
+    // Set initial value from URL and perform initial search
+    searchInput.value = initialQuery;
+    performSearch(initialQuery);
+
+    // Add event listener for dynamic search
+    searchInput.addEventListener('input', () => {
+        performSearch(searchInput.value);
+    });
+
+
+    function performSearch(query) {
         searchQuerySpan.textContent = query;
-        const lowerCaseQuery = query.toLowerCase();
+        const lowerCaseQuery = query.toLowerCase().trim();
+        const searchTerms = lowerCaseQuery.split(' ').filter(term => term.length > 0);
+
+        if (searchTerms.length === 0) {
+            resultsList.innerHTML = '<li>Start typing to see recipe results.</li>';
+            return;
+        }
 
         const foundRecipes = recipes.filter(recipe => {
-            // Check title
-            if (recipe.title.toLowerCase().includes(lowerCaseQuery)) {
-                return true;
-            }
-            // Check tags
-            if (recipe.tags.some(tag => tag.toLowerCase().includes(lowerCaseQuery))) {
-                return true;
-            }
-            // Check ingredients
-            if (recipe.ingredients.some(ing => ing.name.toLowerCase().includes(lowerCaseQuery))) {
-                return true;
-            }
-            return false;
+            const searchableText = [
+                recipe.title.toLowerCase(),
+                ...recipe.tags.map(t => t.toLowerCase()),
+                ...recipe.ingredients.map(i => i.name.toLowerCase())
+            ].join(' ');
+
+            return searchTerms.every(term => searchableText.includes(term));
         });
 
         displayResults(foundRecipes);
-
-    } else {
-        searchQuerySpan.textContent = '...nothing';
-        resultsList.innerHTML = '<li>Please enter a search term on the home page.</li>';
     }
 
     function displayResults(recipesToDisplay) {

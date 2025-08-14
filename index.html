@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tony's Secret Recipes</title>
+    <title>Cook a Feast</title>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div class="landing-page">
         <h1 class="landing-title">Cook a Feast</h1>
-        <div class="search-container">
-            <form action="search-results.html" method="GET">
-                <input type="search" name="query" placeholder="Search for recipes, ingredients, or tags...">
-                <button type="submit">Search</button>
-            </form>
-        </div>
-        <p class="recipe-list-prompt">Or click below to load:</p>
+        <p class="recipe-subtitle">Staple Recipes</p>
+        <p class="recipe-list-prompt">Click below to load a recipe, or use the navigation at the bottom to search.</p>
         <hr>
         <ul class="recipe-list">
             <li><a href="recipes/template.html?id=1">Tony's Original Secret Vegan Curry Recipe</a></li>
@@ -36,6 +31,10 @@
         <a href="pantry.html" class="nav-link">
             <span class="icon">🥫</span>
             <span class="text">The Pantry</span>
+        </a>
+        <a href="search-results.html" class="nav-link">
+            <span class="icon">🔎</span>
+            <span class="text">Search</span>
         </a>
     </nav>
 </body>

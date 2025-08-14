@@ -26,10 +26,9 @@ body {
     max-width: 800px;
     margin: 50px auto 0;
     background: #fefcf8;
-    box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2),
-                inset 0 1px 3px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05), 0 10px 20px rgba(139, 69, 19, 0.1);
     border: 1px solid #e8ddc7;
-    border-radius: 8px;
+    border-radius: 16px;
     position: relative;
     overflow: hidden;
 }
@@ -45,7 +44,7 @@ body {
 }
 
 .page-content {
-    padding: 40px 50px;
+    padding: 50px 60px;
     position: relative;
 }
 
@@ -465,4 +464,80 @@ hr {
 .nav-link .icon {
     font-size: 1.8em;
     margin-bottom: 4px;
+}
+
+/* --- Modern UI (M3 Inspired) --- */
+
+/* Form Elements */
+.search-container {
+    margin: 20px 0;
+}
+
+input[type="search"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: 1px solid #e8ddc7;
+    background-color: #fdfaf6;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+input[type="search"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d2691e;
+    box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.2);
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button,
+#find-recipes-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fefcf8;
+    background-color: #d2691e;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover,
+#find-recipes-btn:hover {
+    background-color: #8b4513;
+}
+
+button:active,
+#find-recipes-btn:active {
+    transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#results-list li,
+.pantry-list li {
+    animation: fadeInUp 0.4s ease-out forwards;
+    /* Staggered animation can be done with JS, but this is a good start */
 }
