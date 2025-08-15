@@ -10,13 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.value = initialQuery;
     performSearch(initialQuery);
 
+    let debounceTimer;
     // Add event listener for dynamic search
     searchInput.addEventListener('input', () => {
-        performSearch(searchInput.value);
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            performSearch(searchInput.value);
+        }, 300);
     });
 
 
     function performSearch(query) {
+        // Update URL
+        const url = new URL(window.location);
+        url.searchParams.set('query', query);
+        window.history.pushState({}, '', url);
+
         searchQuerySpan.textContent = query;
         const lowerCaseQuery = query.toLowerCase().trim();
         const searchTerms = lowerCaseQuery.split(' ').filter(term => term.length > 0);

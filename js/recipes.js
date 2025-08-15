@@ -542,7 +542,6 @@ const recipes = [
         "Toss with olive oil and lemon juice. Season to taste."
     ],
     meatOption: ["flaked salmon", "prawns", "grilled chicken"]
-  }
   },
   {
     id: 23,
@@ -904,7 +903,6 @@ const recipes = [
         "Remove from oven, add tomato sauce, the remaining cheese, and your favorite toppings.",
         "Bake for another 10 minutes until the cheese is melted and bubbly."
     ]
-  }
   },
   {
     id: 37,

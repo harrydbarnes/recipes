@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Crimson Text', serif;
-    background: linear-gradient(145deg, #f8f5f1, #f0ebe5);
+    background: #a60530;
+    color: #2b1c14;
     min-height: 100vh;
     padding: 20px;
     animation: fadeIn 1s ease-in-out;
@@ -25,8 +26,8 @@ body {
 .cookbook-page {
     max-width: 800px;
     margin: 50px auto 0;
-    background: #fefcf8;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05), 0 10px 20px rgba(139, 69, 19, 0.1);
+    background: #f2c879;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05), 0 10px 20px rgba(43, 28, 20, 0.1);
     border: 1px solid #e8ddc7;
     border-radius: 16px;
     position: relative;
@@ -40,7 +41,7 @@ body {
     left: 0;
     right: 0;
     height: 6px;
-    background: linear-gradient(90deg, #8b4513, #d2691e, #8b4513);
+    background: linear-gradient(90deg, #2b1c14, #a60530, #2b1c14);
 }
 
 .page-content {
@@ -51,20 +52,20 @@ body {
 .recipe-title {
     font-family: 'Reenie Beanie', cursive;
     font-size: 3.2em;
-    color: #8b4513;
+    color: #a60530;
     text-align: center;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.1);
+    text-shadow: 2px 2px 4px rgba(43, 28, 20, 0.1);
     line-height: 1.2;
 }
 
 .recipe-subtitle {
     font-style: italic;
-    color: #a0522d;
+    color: #2b1c14;
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.1em;
-    border-bottom: 2px dotted #d2691e;
+    border-bottom: 2px dotted #a60530;
     padding-bottom: 15px;
 }
 
@@ -80,16 +81,16 @@ body {
     padding: 25px;
     border-radius: 6px;
     border: 1px solid #e8ddc7;
-    box-shadow: 0 3px 10px rgba(139, 69, 19, 0.08);
+    box-shadow: 0 3px 10px rgba(43, 28, 20, 0.08);
 }
 
 .section-title {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2em;
-    color: #8b4513;
+    color: #2b1c14;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom: 3px solid #d2691e;
+    border-bottom: 3px solid #a60530;
     padding-bottom: 8px;
 }
 
@@ -101,7 +102,7 @@ body {
     margin-bottom: 12px; /* Increased margin */
     padding-left: 35px; /* Adjusted padding for checkbox */
     position: relative;
-    color: #5d4e37;
+    color: #2b1c14;
     line-height: 1.5; /* Adjusted line height */
     display: flex; /* Use flexbox for alignment */
     align-items: center; /* Center items vertically */
@@ -125,8 +126,8 @@ body {
 }
 
 .ingredients-list li input[type="checkbox"]:checked {
-    background-color: #d2691e;
-    border-color: #8b4513;
+    background-color: #a60530;
+    border-color: #2b1c14;
 }
 
 .ingredients-list li input[type="checkbox"]:checked::after {
@@ -145,7 +146,7 @@ body {
 
 .ingredients-list li input[type="checkbox"]:checked + label {
     text-decoration: line-through;
-    color: #a0522d; /* Softer color when checked */
+    color: #a60530; /* Softer color when checked */
 }
 
 .instructions-list {
@@ -158,7 +159,7 @@ body {
     margin-bottom: 25px;
     padding-left: 0;
     position: relative;
-    color: #5d4e37;
+    color: #2b1c14;
     line-height: 1.6;
     text-align: justify;
 }
@@ -167,14 +168,14 @@ body {
     content: "Step " counter(step-counter);
     font-family: 'Reenie Beanie', cursive;
     font-size: 2em;
-    color: #d2691e;
+    color: #a60530;
     text-decoration: underline;
     margin-bottom: 10px;
     text-align: left;
 }
 
 .serving-slider {
-    background: linear-gradient(135deg, rgba(210, 105, 30, 0.08), rgba(139, 69, 19, 0.08));
+    background: linear-gradient(135deg, rgba(166, 5, 48, 0.08), rgba(43, 28, 20, 0.08));
     border: 2px solid #e8ddc7;
     border-radius: 8px;
     padding: 15px 20px;
@@ -191,7 +192,7 @@ body {
 }
 
 .slider-label {
-    color: #8b4513;
+    color: #2b1c14;
     font-weight: 600;
     font-size: 1.1em;
 }
@@ -215,24 +216,24 @@ body {
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #d2691e;
+    background: #a60530;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 2px 4px rgba(43, 28, 20, 0.3);
 }
 
 .slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #d2691e;
+    background: #a60530;
     border-radius: 50%;
     cursor: pointer;
     border: none;
-    box-shadow: 0 2px 4px rgba(139, 69, 19, 0.3);
+    box-shadow: 0 2px 4px rgba(43, 28, 20, 0.3);
 }
 
 .slider-value {
-    color: #8b4513;
+    color: #2b1c14;
     font-weight: 600;
     font-size: 1.1em;
     min-width: 80px;
@@ -246,8 +247,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, rgba(210, 105, 30, 0.1), rgba(139, 69, 19, 0.1));
-    border: 2px solid #d2691e;
+    background: linear-gradient(135deg, rgba(166, 5, 48, 0.1), rgba(43, 28, 20, 0.1));
+    border: 2px solid #a60530;
     border-radius: 8px;
     padding: 20px;
     margin: 25px 0;
@@ -255,7 +256,7 @@ body {
 }
 
 .time-section {
-    color: #8b4513;
+    color: #2b1c14;
     font-weight: 600;
     padding: 0 20px;
     position: relative;
@@ -273,7 +274,7 @@ body {
     top: 15px;
     bottom: 15px;
     width: 1px;
-    background: #d2691e;
+    background: #a60530;
 }
 
 .time-label {
@@ -286,19 +287,14 @@ body {
 .time-value {
     font-weight: 400;
 }
-    text-align: center;
-    margin: 30px 0;
-    color: #d2691e;
-    font-size: 2em;
-}
 
 .chef-note {
-    background: linear-gradient(135deg, rgba(210, 105, 30, 0.1), rgba(139, 69, 19, 0.1));
-    border-left: 4px solid #d2691e;
+    background: linear-gradient(135deg, rgba(166, 5, 48, 0.1), rgba(43, 28, 20, 0.1));
+    border-left: 4px solid #a60530;
     padding: 15px 20px;
     margin: 25px 0;
     font-style: italic;
-    color: #8b4513;
+    color: #2b1c14;
     border-radius: 0 6px 6px 0;
 }
 
@@ -306,7 +302,7 @@ body {
     position: absolute;
     bottom: 20px;
     right: 30px;
-    color: #a0522d;
+    color: #2b1c14;
     font-style: italic;
     font-size: 0.9em;
 }
@@ -330,7 +326,7 @@ body {
 .landing-page {
     max-width: 800px;
     margin: 0 auto;
-    background: #fefcf8;
+    background: #f2c879;
     box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2),
                 inset 0 1px 3px rgba(255, 255, 255, 0.8);
     border: 1px solid #e8ddc7;
@@ -350,15 +346,15 @@ body {
 .landing-title {
     font-family: 'Reenie Beanie', cursive;
     font-size: 6em;
-    color: #5d4e37;
-    text-shadow: 2px 2px 4px rgba(139, 69, 19, 0.2);
+    color: #a60530;
+    text-shadow: 2px 2px 4px rgba(43, 28, 20, 0.2);
     margin-bottom: 20px; /* Reduced margin */
 }
 
 .recipe-list-prompt {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2.5em;
-    color: #a0522d;
+    color: #2b1c14;
     margin-bottom: 20px;
 }
 
@@ -366,7 +362,7 @@ hr {
     width: 75%;
     margin: 0 auto 20px auto;
     border: none;
-    border-top: 2px dotted #d2691e;
+    border-top: 2px dotted #a60530;
 }
 
 .recipe-list {
@@ -383,7 +379,7 @@ hr {
 .recipe-list li a {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2.8em; /* Slightly increased font size */
-    color: #d2691e;
+    color: #a60530;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
     line-height: 1.5;
@@ -401,11 +397,11 @@ hr {
 .recipe-list .separator {
     font-size: 2.5em;
     text-align: center;
-    color: #a0522d;
+    color: #2b1c14;
 }
 
 .recipe-list li a:hover {
-    color: #8b4513;
+    color: #2b1c14;
     transform: scale(1.05); /* Add a subtle hover effect */
 }
 
@@ -416,7 +412,7 @@ hr {
     left: 20px;
     font-family: 'Crimson Text', serif;
     font-size: 1.2em;
-    color: #8b4513;
+    color: #2b1c14;
     text-decoration: none;
     z-index: 10;
     background: rgba(255, 255, 255, 0.7);
@@ -428,7 +424,7 @@ hr {
 
 .back-button:hover {
     background: white;
-    color: #d2691e;
+    color: #a60530;
     transform: translateX(-2px);
 }
 
@@ -438,8 +434,8 @@ hr {
     bottom: 0;
     left: 0;
     right: 0;
-    background: #fefcf8;
-    box-shadow: 0 -5px 15px rgba(139, 69, 19, 0.15);
+    background: #f2c879;
+    box-shadow: 0 -5px 15px rgba(43, 28, 20, 0.15);
     border-top: 1px solid #e8ddc7;
     display: flex;
     justify-content: space-around;
@@ -451,14 +447,14 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #8b4513;
+    color: #2b1c14;
     text-decoration: none;
     font-size: 0.8em;
     transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #d2691e;
+    color: #a60530;
 }
 
 .nav-link .icon {
@@ -488,8 +484,8 @@ textarea {
 input[type="search"]:focus,
 textarea:focus {
     outline: none;
-    border-color: #d2691e;
-    box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.2);
+    border-color: #a60530;
+    box-shadow: 0 0 0 3px rgba(166, 5, 48, 0.2);
 }
 
 textarea {
@@ -506,8 +502,8 @@ button,
     font-family: 'Crimson Text', serif;
     font-size: 1.2em;
     font-weight: bold;
-    color: #fefcf8;
-    background-color: #d2691e;
+    color: #f2c879;
+    background-color: #a60530;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -516,7 +512,7 @@ button,
 
 button:hover,
 #find-recipes-btn:hover {
-    background-color: #8b4513;
+    background-color: #2b1c14;
 }
 
 button:active,
@@ -540,4 +536,30 @@ button:active,
 .pantry-list li {
     animation: fadeInUp 0.4s ease-out forwards;
     /* Staggered animation can be done with JS, but this is a good start */
+}
+
+/* My Week Page Styles */
+.week-planner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.day-card {
+    background: #f2c879;
+    border: 1px solid #e8ddc7;
+    border-radius: 8px;
+    padding: 20px;
+}
+.day-title {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2em;
+    color: #a60530;
+    margin-bottom: 10px;
+}
+.recipe-slot {
+    min-height: 50px;
+    border: 2px dashed #a60530;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Week - Meal Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <a href="index.html" class="back-button">&larr; Home</a>
+    <div class="cookbook-page">
+        <div class="page-content">
+            <h1 class="recipe-title">My Week</h1>
+            <p class="recipe-subtitle">Plan your week's meals here. Drag and drop recipes to plan your week.</p>
+
+            <div id="recipe-list-container">
+                <h2 class="section-title">Available Recipes</h2>
+                <ul id="available-recipes" class="recipe-list">
+                    <!-- Recipes will be populated by js/my-week.js -->
+                </ul>
+            </div>
+
+            <div class="week-planner">
+                <div class="day-card">
+                    <h2 class="day-title">Monday</h2>
+                    <div class="recipe-slot" data-day="monday"></div>
+                </div>
+                <div class="day-card">
+                    <h2 class="day-title">Tuesday</h2>
+                    <div class="recipe-slot" data-day="tuesday"></div>
+                </div>
+                <div class="day-card">
+                    <h2 class="day-title">Wednesday</h2>
+                    <div class="recipe-slot" data-day="wednesday"></div>
+                </div>
+                <div class="day-card">
+                    <h2 class="day-title">Thursday</h2>
+                    <div class="recipe-slot" data-day="thursday"></div>
+                </div>
+                <div class="day-card">
+                    <h2 class="day-title">Friday</h2>
+                    <div class="recipe-slot" data-day="friday"></div>
+                </div>
+                <div class="day-card">
+                    <h2 class="day-title">Saturday</h2>
+                    <div class="recipe-slot" data-day="saturday"></div>
+                </div>
+                <div class="day-card">
+                    <h2 class="day-title">Sunday</h2>
+                    <div class="recipe-slot" data-day="sunday"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <span class="icon">🏠</span>
+            <span class="text">Home</span>
+        </a>
+        <a href="search-results.html" class="nav-link">
+            <span class="icon">🔎</span>
+            <span class="text">Search</span>
+        </a>
+        <a href="fridge-raider.html" class="nav-link">
+            <span class="icon">🍳</span>
+            <span class="text">Fridge Raider</span>
+        </a>
+        <a href="pantry.html" class="nav-link">
+            <span class="icon">🥫</span>
+            <span class="text">The Pantry</span>
+        </a>
+        <a href="my-week.html" class="nav-link">
+            <span class="icon">🗓️</span>
+            <span class="text">My Week</span>
+        </a>
+    </nav>
+    <script src="js/recipes.js" defer></script>
+    <script src="js/my-week.js" defer></script>
+</body>
+</html>
