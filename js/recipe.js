@@ -39,8 +39,9 @@ function updateServings() {
 
         // Get the emoji and unit from original text
         const originalText = element.innerHTML;
-        const emoji = originalText.match(/^[^a-zA-Z0-9\s]+/)[0];
-        const unit = originalText.replace(/^[^a-zA-Z0-9\s]+\s*[\d\/\.]+\s*/, '').trim();
+        const emojiMatch = originalText.match(/^(\S+)/);
+        const emoji = emojiMatch ? emojiMatch[0] : '';
+        const unit = originalText.replace(/^(\S+)\s*[\d\/\.]+\s*/, '').trim();
 
         element.innerHTML = `${emoji} ${formattedAmount}${unit ? ' ' + unit : ''}`;
     });
